@@ -22,5 +22,9 @@ public class GameControllerScript : MonoBehaviour
             nextBabyTime = Time.time + (babyRate * Random.Range(1, 2));
             Instantiate(daBabyObject, transform.position, Random.rotation);
         }
+
+        if(Input.GetAxis("Cancel") > 0) {
+            Application.Quit();
+        }
     }
 }
